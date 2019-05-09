@@ -13,13 +13,14 @@ before_script:
   - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
   - git submodule update --init --depth=1
 
-
-apt:
-  packages:
-    - g++-5
-    - python3.5
-    - python3.5-dev
-    - ninja-build
+matrix:
+  include:
+     - apt:
+        packages:
+          - g++-5
+          - python3.5
+          - python3.5-dev
+          - ninja-build
 
 
 script:
