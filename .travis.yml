@@ -26,4 +26,4 @@ script:
   - mkdir build
   - (cd build && cmake -G Ninja .. )
   - (cd build && ninja all )
-  - (cd build && ninja test )
+  - (cd build && ctest -V )
